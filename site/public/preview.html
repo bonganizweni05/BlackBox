@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0508"><title>Title preview · BlackBox</title>
+    <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/png" href="/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="BlackBox">
+  <link rel="preconnect" href="https://image.tmdb.org"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/styles.css?v=7"><link rel="stylesheet" href="/detail-pages.css?v=7">
+</head>
+<body data-page="preview">
+  <main class="preview-main">
+    <section class="preview-hero" id="previewHero">
+      <div class="preview-backdrop" id="previewBackdrop"></div><div class="preview-overlay"></div>
+      <div class="preview-content">
+        <a class="back-link" href="/movies" id="backLink">← <span>Back to browse</span></a>
+        <p class="preview-brandline"><span class="preview-pill" id="previewType">MOVIE</span></p>
+        <h1 id="previewTitle">Loading title…</h1>
+        <div class="preview-meta" id="previewMeta"></div>
+        <div class="chips" id="previewGenres"></div>
+        <p class="preview-description" id="previewDescription">Loading title information.</p>
+        <div class="preview-actions"><button class="btn btn-primary watch-now-btn" id="watchNow">▶ <span>Watch Now</span></button><button class="btn btn-glass" id="previewSave">＋ My List</button></div>
+        <p class="preview-note" id="previewNote"></p>
+      </div>
+      <div class="preview-poster-wrap"><img id="previewPoster" class="preview-poster" alt="Title poster" decoding="async"></div>
+    </section>
+    <section class="preview-details content-section"><div><p class="section-overline">THE STORY</p><h2>About this title</h2><p id="previewFullDescription" class="full-description"></p></div><div class="detail-facts" id="previewFacts"></div></section>
+    <section class="content-section" id="similarSection" hidden><div class="section-heading"><div><p class="section-overline">KEEP GOING</p><h2 id="similarTitle">More like this</h2></div><a class="view-all" id="similarLink" href="/movies">See all <span>→</span></a></div><div id="similarRow"></div></section>
+  </main>
+  <script src="/core.js?v=7"></script>
+  <script src="/detail-pages.js?v=7"></script>
+</body></html>

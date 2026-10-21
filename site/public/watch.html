@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0508"><title>Now playing · BlackBox</title>
+    <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/png" href="/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="BlackBox">
+  <link rel="preconnect" href="https://vaplayer.ru"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/styles.css?v=7"><link rel="stylesheet" href="/detail-pages.css?v=7">
+</head>
+<body data-page="watch" class="watch-page">
+  <main class="player-main">
+    <div class="player-heading">
+      <a class="back-link" id="backToPreview" href="/">← <span>Details</span></a>
+      <div class="player-title-block"><h1 id="playerTitle">Loading title…</h1><p class="player-meta" id="playerMeta"></p></div>
+      <a class="player-back" id="playerInfoLink" href="/">Title information ↗</a>
+    </div>
+    <div class="episode-picker" id="episodePicker" hidden><label>Season <input type="number" id="seasonInput" min="1" value="1"></label><label>Episode <input type="number" id="episodeInput" min="1" value="1"></label><button class="player-tool" id="prevEp" type="button">‹ Prev</button><button class="player-tool" id="nextEp" type="button">Next ›</button><button class="btn btn-primary" id="playEp" type="button">Play episode</button></div>
+    <section class="media-shell" id="mediaShell" aria-label="Media player">
+      <div class="media-toolbar">
+        <span id="mediaStatusLabel"><span class="media-status-dot"></span> BLACKBOX STREAM</span>
+        <span class="toolbar-actions">
+          <button id="shieldToggle" type="button" class="player-tool" aria-pressed="true" title="Blocks popups and redirects from the player">🛡 Ad shield: ON</button>
+          <button id="infoToggle" type="button" class="player-tool">ⓘ Details</button>
+          <button id="fullscreenBtn" type="button" class="player-tool">⛶ Fullscreen</button>
+          <button id="reloadPlayer" type="button" class="player-tool">↻ Reload</button>
+        </span>
+      </div>
+      <div class="media-stage" id="mediaStage"><div class="player-empty"><div class="player-empty-icon">▶</div><p id="playerStatus">Preparing your media…</p><small id="playerHint">The player will appear here when a valid playback source is available.</small></div></div>
+      <aside class="info-drawer" id="infoDrawer" hidden>
+        <button type="button" class="drawer-close" id="infoClose" aria-label="Close details">✕</button>
+        <p class="section-overline">ABOUT THIS TITLE</p><h2 id="playerAboutTitle">Title information</h2><p id="playerDescription"></p>
+        <div class="player-tip"><span class="tip-icon">ⓘ</span><div><strong>Playback note</strong><p id="playbackHelp"></p></div></div>
+      </aside>
+    </section>
+  </main>
+  <script src="/core.js?v=7"></script>
+  <script src="/detail-pages.js?v=7"></script>
+</body></html>

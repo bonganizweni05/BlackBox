@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0508">
+  <title>Browse · BlackBox</title>
+    <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" type="image/png" href="/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="BlackBox">
+  <link rel="preconnect" href="https://image.tmdb.org"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="/styles.css?v=7">
+</head>
+<body data-page="browse">
+  <main class="browse-main">
+    <section class="category-banner" id="banner">
+      <div class="banner-inner">
+        <p class="section-overline" id="bannerOverline"></p>
+        <h1 id="bannerTitle">Browse</h1>
+        <p class="banner-sub" id="bannerSub"></p>
+      </div>
+    </section>
+
+    <div class="genre-strip" id="genreStrip" aria-label="Quick genre filter"></div>
+
+    <div class="browse-layout">
+      <div class="drawer-scrim" id="scrim"></div>
+      <aside class="filters" id="filters" aria-label="Filters">
+        <div class="filters-head"><h2>Filters</h2><button type="button" class="link-btn" id="resetFilters">Reset</button><button type="button" class="drawer-close" id="closeFilters" aria-label="Close filters">✕</button></div>
+        <div class="filter-group" id="typeGroup" hidden><h3>Type</h3><div class="seg" id="typeSeg"></div></div>
+        <div class="filter-group"><h3>Genre</h3><div class="check-list" id="genreList"></div></div>
+        <div class="filter-group"><h3>Release</h3><div class="seg seg-wrap" id="yearSeg"></div></div>
+        <div class="filter-group"><h3>Minimum rating</h3><div class="seg" id="ratingSeg"></div></div>
+        <div class="filter-group"><h3>Sort by</h3><select id="sortSelect" aria-label="Sort by"></select></div>
+        <button type="button" class="btn btn-primary drawer-apply" id="applyFilters">Show results</button>
+      </aside>
+
+      <section class="results" aria-live="polite">
+        <div class="results-bar">
+          <button type="button" class="btn btn-glass filters-open" id="openFilters">⚙ Filters <b id="filterBadge" hidden></b></button>
+          <p class="results-count" id="resultsCount"></p>
+          <div class="active-filters" id="activeFilters"></div>
+        </div>
+        <div id="resultsBody"></div>
+      </section>
+    </div>
+  </main>
+  <script src="/core.js?v=7"></script>
+  <script src="/browse.js?v=7"></script>
+</body>
+</html>

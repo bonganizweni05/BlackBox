@@ -1,0 +1,13 @@
+{
+  "name": "blackbox-movies",
+  "version": "1.1.0",
+  "private": true,
+  "description": "BlackBox local movie discovery, title previews, and media player",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "serverless-http": "^3.2.0"
+  }
+}

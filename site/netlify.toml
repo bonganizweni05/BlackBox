@@ -1,0 +1,37 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/movies"
+  to = "/browse.html"
+  status = 200
+
+[[redirects]]
+  from = "/series"
+  to = "/browse.html"
+  status = 200
+
+[[redirects]]
+  from = "/trending"
+  to = "/browse.html"
+  status = 200
+
+[[redirects]]
+  from = "/my-list"
+  to = "/browse.html"
+  status = 200
+
+[[redirects]]
+  from = "/search"
+  to = "/browse.html"
+  status = 200
