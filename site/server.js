@@ -185,7 +185,7 @@ app.get(CATEGORY_ROUTES, (_req, res) => { res.setHeader("Cache-Control", "no-cac
 
 app.get("*", (_req, res) => res.sendFile(path.join(__dirname, "public", "index.html")));
 if (require.main === module) {
-  app.listen(PORT, "127.0.0.1", () => console.log(`BlackBox is running at http://localhost:${PORT}`));
+  app.listen(PORT, "0.0.0.0", () => console.log(`BlackBox is listening on 0.0.0.0:${PORT}`));
 }
 
 module.exports = app;
